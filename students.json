@@ -1,0 +1,18 @@
+[
+  {
+    "email": "alice@example.com",
+    "name": "Alice Johnson",
+    "joined": "2024-09-15",
+    "enrolled": ["Full Stack Web Development", "UI/UX Design"],
+    "progress": {"Full Stack Web Development": 65, "UI/UX Design": 40},
+    "certificates": ["HTML & CSS — Certificate (Completed)", "Intro to JavaScript — Certificate (In Progress)"]
+  },
+  {
+    "email": "bob@example.com",
+    "name": "Bob Martin",
+    "joined": "2025-02-10",
+    "enrolled": ["Python for Data Science"],
+    "progress": {"Python for Data Science": 80},
+    "certificates": ["Python Basics — Certificate (Completed)"]
+  }
+]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Verify Certificates — CraftyTech.ai</title>
+                <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+        <header class="site-header">
+            <div class="container header-inner" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="index.html" class="brand">
+                        <div class="brand-logo-box">
+                            <img src="img/logo.png" alt="CraftyTech.ai Logo" style="width: 40px; height: auto;">
+                        </div>
+                    <div class="brand-text">
+                        <div class="brand-name">CraftyTech.ai</div>
+                        <div class="brand-tagline">Digital Solutions</div>
+                    </div>
+                </a>
+                <nav class="main-nav">
+                    <a href="students.html" class="nav-link">Students Careers</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="index.html" class="nav-link">Services</a>
+                    <a href="carrers.html" class="nav-link">Careers</a>
+                    <a href="#contact" class="nav-link cta">Start Project</a>
+                </nav>
+            </div>
+        </header>
+    <main>
+        <section>
+            <h2>Certificate Verification</h2>
+            <form id="certificate-verification-form">
+                <label for="certificate-id">Certificate ID:</label>
+                <input type="text" id="certificate-id" name="certificate-id" required>
+                <button type="submit">Verify</button>
+            </form>
+            <div id="verification-result"></div>
+        </section>
+    </main>
+        <footer class="site-footer container">
+                <div class="footer-flex">
+                    <div>
+                        <div style="font-weight: 800; font-size: 16px; color: var(--text-primary);">CraftyTech.ai</div>
+                        <div class="muted" style="margin-top: 8px;">Digital Solutions.</div>
+                    </div>
+                    <div>
+                         <div class="muted">© 2026 CraftyTech.ai — All rights reserved.</div>
+                         <div class="muted" style="margin-top:4px">Visakhapatnam • India</div>
+                    </div>
+                </div>
+        </footer>
+    <script>
+        document.getElementById('certificate-verification-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const certificateId = document.getElementById('certificate-id').value;
+            const resultDiv = document.getElementById('verification-result');
+
+            // Simulate verification logic
+            if (certificateId === '12345') {
+                resultDiv.innerHTML = '<p style="color: green;">Certificate is valid.</p>' +
+                                      '<p>Certificate ID: 12345</p>' +
+                                      '<p> Name: John Doe</p>' +
+                                      '<p>Course: Web Development</p>' +
+                                      '<p>Completion Date: January 15, 2026</p>';
+            } else if (certificateId === 'CT001') {
+                resultDiv.innerHTML = '<p style="color: green;">Certificate is valid.</p>' +
+                                      '<p>Certificate ID: CT001</p>' +
+                                      '<p>Course: Data Science</p>' +
+                                      '<p>Completion Date: February 10, 2026</p>';
+            } else {
+                resultDiv.textContent = 'Certificate is invalid.';
+                resultDiv.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -259,3 +259,28 @@ footer {
 .center {
   text-align: center;
 }
+
+/* Site-wide motion improvements */
+:root {
+  --motion-speed: 320ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth transitions for common interactive elements */
+.btn, .card, .service, .project, .project img, a, nav a, .chip, .stat, .portfolio img {
+  transition: transform var(--motion-speed) var(--motion-ease),
+              box-shadow var(--motion-speed) var(--motion-ease),
+              opacity var(--motion-speed) var(--motion-ease),
+              background-color var(--motion-speed) var(--motion-ease),
+              border-color var(--motion-speed) var(--motion-ease);
+  will-change: transform;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .card, .service, .project, .project img, a, nav a, .chip, .stat, .portfolio img {
+    transition: none !important;
+    animation: none !important;
+  }
+}
