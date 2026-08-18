@@ -15,4 +15,14 @@
     "progress": {"Python for Data Science": 80},
     "certificates": ["Python Basics — Certificate (Completed)"]
   }
+  {
+  "email": "vsumalatha9573@gmail.com",
+  "name": "Vasamsetti Sumalatha",
+  "joined": "2026-08-18",
+  "enrolled": ["Digital Marketing"],
+  "progress": {
+    "Digital Marketing": 0
+  },
+  "certificates": []
+}
 ]
